@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+
+        </style>
+        <script>
+            // js code before closing of head tag 
+        </script>
+    </head>
+    <body>
+        <div class="myclass">
+            <span>
+                Good morning
+            </span>
+        </div>
+        <form>
+            <input type="text" onkeyup="myfun1(this)">
+            <input type="text" onkeyup="myfun2(this)">
+            <input type="checkbox">
+            <select onchange="myfun3(this)">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <textarea onkeyup="myfun4(this)"></textarea>
+        </form>
+        <script>
+            // js code before closing of body tag 
+            let e1 = document.querySelector('div.myclass'); //L = R R -> L we called associativity of operator
+            console.log(e1.innerHTML);
+            console.log(e1.innerText);
+
+            function myfun1(w) {// w is  a formal Argument , w will contain the current element 
+                
+                console.log("okay"+w.value);
+            }
+
+                function myfun2(x) {// x is  a formal Argument , x will contain the current element 
+                console.log("okay"+x.value);
+            }
+
+            function myfun3(y) {// x is  a formal Argument , y will contain the current element 
+                console.log("okay"+y.value);
+            }
+
+            function myfun4(z) {// z is  a formal Argument , z will contain the current element 
+                console.log("okay"+z.value);
+            }
+
+            let student1 = {
+                // 1 property:value
+                name:"vishnu",
+                sunname:"jaat",
+
+                //2 method/function
+                getName(){
+                    console.log(this.name)
+                    //object.method()
+                    this.getsurname(); // i calling the function internally
+                },
+                getsurname(){
+                    console.log(this.surname)
+                }
+                
+                
+            }; // js object
+
+            student1.getName();
+            //student1.getsurname(); I can calling the function externally
+
+
+        </script> 
+    </body>
+</html>
